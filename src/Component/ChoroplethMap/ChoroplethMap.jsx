@@ -7,9 +7,10 @@ const ChoroplethMap = () => {
   const [mapData, setMapData] = useState(null);
 
   useEffect(() => {
-    fetch('.\dashboard\src\world.geojson')
+      fetch('src/world.geojson')
       .then((response) => response?.json())
       .then((data) => {
+        console.log(data,'dataGeo')
         setMapData(data);
       });
   }, []);
