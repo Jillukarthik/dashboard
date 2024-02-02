@@ -1,15 +1,19 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import ChartComponent from '../ChartComponent/ChartComponent'
 import SortableTable from '../Reusable/SortableTable'
 import ChoroplethMap from '../ChoroplethMap/ChoroplethMap'
-import { useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Dashboard() {
-
-  const location=useLocation()
-  console.log(location)
+  const navigate=useNavigate()
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn !== "true") {
+      navigate("/");
+    }
+  }, []);
     const data = [
         {
           name: 'John Doe',
