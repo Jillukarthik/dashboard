@@ -47,7 +47,7 @@ const Header = () => {
     <Box as="header" bg={useColorModeValue('gray.300', 'gray.1000')} h="50px" w="100%" boxShadow="sm">
       <Flex align="center" h="100%" padding={{ base: '0.5rem', md: '1rem' }}>
         <Box>
-          <span style={{ fontWeight: 'bold', fontSize: '30px' }}>Analytics dashboard</span>
+        <span style={{ fontWeight: 'bold', fontSize: { base: '20px', md: '30px' } }}>Analytics dashboard</span>
         </Box>
         <Spacer />
         {/* Dark/Light Mode Toggle */}
