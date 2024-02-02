@@ -7,7 +7,7 @@ const ChoroplethMap = () => {
   const [mapData, setMapData] = useState(null);
 
   useEffect(() => {
-      fetch('src/world.geojson')
+      fetch('https://glowing-jalebi-69cb09.netlify.app/world.geojson')
       .then((response) => response?.json())
       .then((data) => {
         console.log(data,'dataGeo')
